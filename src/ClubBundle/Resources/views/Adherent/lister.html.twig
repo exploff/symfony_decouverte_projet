@@ -1,0 +1,45 @@
+{% extends '@Club/layout.html.twig' %}
+{% block title %} {{ "adherent.liste" | trans }} {% endblock %}
+{% block content %}
+   
+    <form id="form_recherche" action="{{ path('club_adherent_rechercher') }}" method="post">
+        
+        {{ form_widget(formRechAdh) }}
+        <input type="submit" value="{{ "rechercher" | trans }}"/>
+    </form>
+
+    {% for message in app.flashes('notice') %}
+        <div class="flash-notice"> {{ message }} </div>
+    {% endfor %}
+
+    <div class="loading"></div>
+
+    <div id="resultats_recherche">
+        {{ include('@Club/Adherent/liste.html.twig', {'adherents': adherents}) }}
+    </div>
+    <p>
+        <a href="{{ path('club_adherent_ajouter') }}">{{ "adherent.ajouter" | trans }}</a>
+    </p>
+    <script>
+        $(".loading").hide();
+
+        $("#form_recherche").submit(function() {
+            $(".loading").show();
+            var motcle = $("#adherent_recherche_motcle").val();
+            var data = 'motcle='+motcle;
+            $.ajax({
+                type: "POST",
+                url: "{{ path('club_adherent_rechercher') }}",
+                data: data,
+                cache: false,
+                success: function(data){
+                    $('#resultats_recherche').html(data);
+                    $(".loading").hide();
+                }
+            })
+            return false;
+        })
+    </script>
+
+{% endblock %}
+

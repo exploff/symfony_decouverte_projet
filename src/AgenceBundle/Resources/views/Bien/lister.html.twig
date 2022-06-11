@@ -1,0 +1,42 @@
+{% extends '@Agence/layout.html.twig' %}
+{% block title %}{{ "bien.liste" | trans }}{% endblock %}
+{% block content %}
+
+    <form id="form_recherche" action="{{ path('agence_bien_rechercher') }}" method="post">
+        
+        {{ form_widget(formRchBien) }}
+        <input type="submit" value="{{ "rechercher" | trans }}"/>
+    </form>
+    <br/>
+    {% for message in app.flashes('notice') %}
+        <div class="flash-notice"> {{ message }} </div>
+    {% endfor %}
+    <div class="loading"></div>
+    <br/>
+    <div id="resultats_recherche">
+        {{ include('@Agence/Bien/liste.html.twig', {'biens' : biens}) }}
+    </div>
+    <p>
+        <a href="{{ path('agence_bien_ajouter') }}">{{ "bien.ajouter" | trans }}</a>
+    </p>
+    <script>
+        $(".loading").hide();
+
+        $("#form_recherche").submit(function() {
+            $(".loading").show();
+            var motcle = $("#bien_recherche_motcle").val();
+            var data = 'motcle='+motcle;
+            $.ajax({
+                type: "POST",
+                url: "{{ path('agence_bien_rechercher') }}",
+                data: data,
+                cache: false,
+                success: function(data){
+                    $('#resultats_recherche').html(data);
+                    $(".loading").hide();
+                }
+            })
+            return false;
+        })
+    </script>
+{% endblock %}

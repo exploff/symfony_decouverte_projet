@@ -1,0 +1,51 @@
+annee_bissextile:
+    path: /bissextile/{nbAnnee}
+    defaults: { _controller: ClubBundle:Default:anneeBissextile }
+club_accueil:
+    path: /
+    defaults: { _controller: ClubBundle:Default:index }
+club_adherent_lister:
+    path: /adherent/
+    defaults: { _controller: ClubBundle:Adherent:lister }
+club_adherent_ajouter:
+    path: /adherent/ajouter
+    defaults: { _controller: ClubBundle:Adherent:editer }
+club_adherent_modifier:
+    path: /adherent/modifier/{id}
+    defaults: { _controller: ClubBundle:Adherent:editer }
+club_adherent_supprimer:
+    path: /adherent/supprimer/{id}
+    defaults: { _controller: ClubBundle:Adherent:supprimer }
+club_adherent_rechercher:
+    path: /adherent/rechercher
+    defaults: { _controller: ClubBundle:Adherent:rechercher }
+    requirements:
+        _method: POST
+club_club_lister:
+    path: /club/
+    defaults: { _controller: ClubBundle:Club:lister }
+club_club_ajouter:
+    path: /club/ajouter
+    defaults: { _controller: ClubBundle:Club:editer }
+club_club_modifier:
+    path: /club/modifier/{id}
+    defaults: { _controller: ClubBundle:Club:editer }
+club_club_supprimer:
+    path: /club/supprimer/{id}
+    defaults: { _controller: ClubBundle:Club:supprimer }
+club_activite_lister:
+    path: /activite/
+    defaults: { _controller: ClubBundle:Activite:lister }
+club_activite_ajouter:
+    path: /activite/ajouter
+    defaults: { _controller: ClubBundle:Activite:editer }
+club_activite_modifier:
+    path: /activite/modifier/{id}
+    defaults: { _controller: ClubBundle:Activite:editer }
+club_activite_supprimer:
+    path: /activite/supprimer/{id}
+    defaults: { _controller: ClubBundle:Activite:supprimer }
+club_activite_details:
+    path: /activite/details/{id}
+    defaults: { _controller: ClubBundle:Activite:details }
+

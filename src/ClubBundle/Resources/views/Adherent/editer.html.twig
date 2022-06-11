@@ -1,0 +1,26 @@
+{% extends '@Club/layout.html.twig' %}
+{% block title %}{{ "adherent.ajouter.modifier" | trans }}{% endblock %}
+{% block content %}
+    {{ form_start(form) }}
+
+        <div class="error">{{ form_errors(form) }}</div>
+        <table>
+            <tr>
+                <td> {{ form_label(form.nom, "adherent.label.nom" | trans) }}</td>
+                <td> {{ form_label(form.prenom, "adherent.label.prenom" | trans) }}</td>
+                <td> {{ form_label(form.date, "adherent.label.date" | trans) }}</td>
+                <td> {{ form_label(form.sexe, "adherent.label.sexe" | trans) }}</td>
+            </tr>
+            <tr>
+            
+                <td> {{ form_errors(form.nom) }} {{ form_widget(form.nom) }}</td>
+                <td> {{ form_errors(form.prenom) }} {{ form_widget(form.prenom) }}</td>
+                <td> {{ form_errors(form.date) }} {{ form_widget(form.date) }}</td>
+                <td> {{ form_errors(form.sexe) }} {{ form_widget(form.sexe) }}</td>
+            </tr>
+
+        </table>
+        {{ form_rest(form) }}
+
+    {{ form_end(form) }}
+{% endblock %}

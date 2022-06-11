@@ -1,0 +1,8 @@
+erreur.activite.min.titre: Le titre de l'activité doit contenir au moins {{ limit }} caractères
+erreur.adherent.min.nom: Le nom de l'adhérent doit contenir au moins {{ limit }} caractères
+erreur.adherent.min.prenom: Le prenom de l'adhérent doit contenir au moins {{ limit }} caractères
+erreur.club.min.nom: Le nom du club doit contenir au moins {{ limit }} caractères
+
+erreur.visiteur.min.nom:  Le nom du visiteur doit contenir au moins {{ limit }} caractères
+erreur.visiteur.min.prenom: Le prenom du visiteur doit contenir au moins {{ limit }} caractères
+erreur.visiteur.min.telephone: Le numéro de téléphone du visiteur doit contenir {{ limit }} chiffres

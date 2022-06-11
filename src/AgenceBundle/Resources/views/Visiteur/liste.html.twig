@@ -1,0 +1,30 @@
+{{ number_of_visiteur }}
+<table>
+    {% for visiteur in visiteurs %}
+    <tr>
+        <td> {{ visiteur.nom }} </td>
+        <td> {{ visiteur.prenom }} </td>
+        <td> {{ visiteur.telephone }} </td>
+
+        <td>
+            {% for bien in visiteur.biens %}
+                {{ bien.nomBien }}-{{ bien.dateConstruction | date('d/m/Y') }}-{{ bien.prix }} € 
+                <br/>
+            {% else %} 
+                {{ "bien.liste.empty" | trans }}
+            {% endfor %}
+        </td>
+
+        <td><a href="{{ path('agence_visiteur_details' , { 'id': visiteur.id}) }}">{{ "details" | trans }} | 
+        <a href="{{ path('agence_visiteur_modifier' , { 'id': visiteur.id}) }}">{{ "modifier" | trans }} | 
+        <a href="{{ path('agence_visiteur_supprimer' , { 'id': visiteur.id}) }}">{{ "supprimer" | trans }}</td>
+
+    </tr>
+
+    {% else %} 
+        <tr>
+            <td>{{ "visiteur.liste.empty" | trans }}</td>
+        </tr>
+    {% endfor %}
+
+</table>

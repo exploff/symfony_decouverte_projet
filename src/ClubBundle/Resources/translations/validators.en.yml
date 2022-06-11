@@ -1,0 +1,4 @@
+erreur.activite.min.titre: Activity's title must at least contain {{ limit }} characters
+erreur.adherent.min.nom: Member's name must at least contain {{ limit }} characters
+erreur.adherent.min.prenom: Member's firstname must at least contain {{ limit }} characters
+erreur.club.min.nom: Club's name must at least contain {{ limit }} characters

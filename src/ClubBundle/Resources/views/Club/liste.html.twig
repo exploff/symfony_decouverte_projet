@@ -1,0 +1,17 @@
+{{ number_of_club }}
+<table>
+    {% for club in clubs %}
+
+    <tr>
+        <td> {{ club.nom }} </td>
+        <td><a href="{{ path('club_club_modifier' , { 'id': club.id}) }}">{{ "modifier" | trans }}</td>
+        <td><a href="{{ path('club_club_supprimer' , { 'id': club.id}) }}">{{ "supprimer" | trans }}</td>
+
+    </tr>
+
+    {% else %} 
+        <tr>
+            <td>{{ "club.liste.empty" | trans }}</td>
+        </tr>
+    {% endfor %}
+</table>

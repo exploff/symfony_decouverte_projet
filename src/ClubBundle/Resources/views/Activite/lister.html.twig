@@ -1,0 +1,15 @@
+{% extends '@Club/layout.html.twig' %}
+{% block title %}{{ "activite.liste" | trans }}{% endblock %}
+{% block content %}
+
+    {% for message in app.flashes('notice') %}
+        <div class="flash-notice">{{ message }}</div>
+    {% endfor %}
+
+    {{ include('@Club/Activite/liste.html.twig', {'activites' : activites}) }}
+
+
+    <p>
+        <a href="{{ path('club_activite_ajouter') }}">{{ "activite.ajouter" | trans }}</a>
+    </p>
+{% endblock %}

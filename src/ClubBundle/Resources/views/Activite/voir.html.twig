@@ -1,0 +1,19 @@
+{% extends '@Club/layout.html.twig' %}
+{% block title %} {{ activite.titre }} {% endblock %}
+{% block content %}
+
+<p>{{ "activite.club" | trans }} : {{ activite.description }}</p>
+
+<p>{{ club }} {{ activite.club.nom }}</p>
+
+<p>{{ "activite.adherents.inscrits" | trans }} :</p>
+<ul>
+    {% for adherent in activite.adherents %}
+        <li>{{ adherent.nom }} - {{ adherent.prenom }}</li>
+    {% else %} 
+        <li>{{ "adherent.liste.empty" | trans }}</li>
+    {% endfor %}
+</ul>
+</br>
+<a href="{{ path('club_activite_lister') }}">{{ "activite.liste.retour" | trans }}</a>
+{% endblock %}

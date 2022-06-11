@@ -1,0 +1,24 @@
+{% extends '@Agence/layout.html.twig' %}
+{% block title %}{{ "achat.ajouter.modifier" | trans }}{% endblock %}
+
+{% block content %}
+        {{ form_start(form) }}
+
+        <div class="error">{{ form_errors(form) }}</div>
+        <table>
+            <tr>
+                <td> {{ form_label(form.biens, "achat.bien" | trans) }}</td>
+                <td> {{ form_label(form.dateAchat, "achat.dateAchat" | trans ) }}</td>
+                <td> {{ form_label(form.proprietaires, "achat.proprietaire" | trans) }}</td>
+            </tr>
+            <tr>
+                <td> {{ form_errors(form.biens) }} {{ form_widget(form.biens) }}</td>
+                <td> {{ form_errors(form.dateAchat) }} {{ form_widget(form.dateAchat) }}</td>
+                <td> {{ form_errors(form.proprietaires) }} {{ form_widget(form.proprietaires) }}</td>
+            </tr>
+
+        </table>
+        {{ form_rest(form) }}
+
+    {{ form_end(form) }}
+{% endblock %}

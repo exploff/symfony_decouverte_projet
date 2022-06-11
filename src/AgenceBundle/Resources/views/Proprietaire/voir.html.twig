@@ -1,0 +1,19 @@
+{% extends '@Agence/layout.html.twig' %}
+{% block title %} {{ "proprietaire" | trans }} {% endblock %}
+{% block content %}
+
+<p>{{ "proprietaire.titre.nom" | trans }} : {{ proprietaire.nom }} </p>
+<p>{{ "proprietaire.titre.prenom" | trans }} : {{ proprietaire.prenom }} </p>
+
+<p>{{ "proprietaire.titre.achats" | trans }} :</p>
+<ul>
+    {% for achat in proprietaire.achat %}
+        <li>{{ achat.dateAchat|date('d/m/Y') }} - {{ achat.biens.nomBien }} {{ achat.biens.dateConstruction|date('d/m/Y') }} {{ achat.biens.prix }}€ </li>
+    {% else %} 
+        <li>{{ "achat.liste.empty" | trans }}</li>
+    {% endfor %}
+</ul>
+
+</br>
+<a href="{{ path('agence_proprietaire_lister') }}">{{ "proprietaire.liste.retour" | trans }}</a>
+{% endblock %}

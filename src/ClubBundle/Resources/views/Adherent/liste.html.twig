@@ -1,0 +1,18 @@
+{{ number_of_adherents }}
+<table>
+{% for a in adherents %}
+
+<tr>
+    <td>{{ a.nom }}</td>
+    <td>{{ a.prenom }}</td>
+    <td>{{ a.date|date('d/m/Y') }}</td>
+    <td>{{ a.sexe }}</td>
+    <td><a href="{{ path('club_adherent_modifier', {'id': a.id}) }}">{{ "modifier" | trans }}</a></td>
+    <td><a href="{{ path('club_adherent_supprimer', {'id': a.id}) }}">{{ "supprimer" | trans }}</a></td>
+
+    {% else %}
+        <tr>
+            <td>Aucun adhérent n'a été trouvé.</td>
+</tr>
+{% endfor %}
+</table>

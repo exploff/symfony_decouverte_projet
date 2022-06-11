@@ -1,0 +1,19 @@
+{% extends '@Agence/layout.html.twig' %}
+{% block title %} {{ typebien.nomType }} {% endblock %}
+{% block content %}
+
+<p>{{ "typebien.titre.nomtype" | trans }} : {{ typebien.nomType }} </p>
+
+
+<p>{{ "typebien.biens" | trans }} :</p>
+<ul>
+    {% for bien in typebien.biens %}
+        <li>{{ bien.nomBien }} - {{ bien.dateConstruction | date("d/m/Y") }} - {{ bien.prix }} €</li>
+    {% else %} 
+        <li>{{ "typebien.biens.empty" | trans }}</li>
+    {% endfor %}
+</ul>
+
+</br>
+<a href="{{ path('agence_typebien_lister') }}">{{ "typebien.liste.retour" | trans }}</a>
+{% endblock %}

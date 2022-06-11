@@ -1,0 +1,27 @@
+{% extends '@Club/layout.html.twig' %}
+{% block title %}{{ "activite.ajouter.modifier" | trans }}{% endblock %}
+
+{% block content %}
+        {{ form_start(form) }}
+
+        <div class="error">{{ form_errors(form) }}</div>
+        <table>
+            <tr>
+                <td> {{ form_label(form.titre, "activite.titre" | trans ) }}</td>
+                <td> {{ form_label(form.description, "activite.description" | trans) }}</td>
+                <td> {{ form_label(form.club, "activite.club" | trans) }}</td>
+                <td> {{ form_label(form.adherents, "activite.adherents" | trans) }}</td>
+            </tr>
+            <tr>
+            
+                <td> {{ form_errors(form.titre) }} {{ form_widget(form.titre) }}</td>
+                <td> {{ form_errors(form.description) }} {{ form_widget(form.description) }}</td>
+                <td> {{ form_errors(form.club) }} {{ form_widget(form.club) }}</td>
+                <td> {{ form_errors(form.adherents) }} {{ form_widget(form.adherents) }}</td>
+            </tr>
+
+        </table>
+        {{ form_rest(form) }}
+
+    {{ form_end(form) }}
+{% endblock %}

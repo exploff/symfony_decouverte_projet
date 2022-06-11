@@ -1,0 +1,25 @@
+{% extends '@Agence/layout.html.twig' %}
+{% block title %}{{ "visiteur.ajouter.modifier" | trans }}{% endblock %}
+
+{% block content %}
+        {{ form_start(form) }}
+
+        <div class="error">{{ form_errors(form) }}</div>
+        <table>
+            <tr>
+                <td> {{ form_label(form.nom, "visiteur.nom" | trans ) }}</td>
+                <td> {{ form_label(form.prenom, "visiteur.prenom" | trans) }}</td>
+                <td> {{ form_label(form.telephone, "visiteur.telephone" | trans) }}</td>
+            </tr>
+            <tr>
+            
+                <td> {{ form_errors(form.nom) }} {{ form_widget(form.nom) }}</td>
+                <td> {{ form_errors(form.prenom) }} {{ form_widget(form.prenom) }}</td>
+                <td> {{ form_errors(form.telephone) }} {{ form_widget(form.telephone) }}</td>
+            </tr>
+
+        </table>
+        {{ form_rest(form) }}
+
+    {{ form_end(form) }}
+{% endblock %}

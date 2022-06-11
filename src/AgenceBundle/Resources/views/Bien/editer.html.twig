@@ -1,0 +1,28 @@
+{% extends '@Agence/layout.html.twig' %}
+{% block title %}{{ "bien.ajouter.modifier" | trans }}{% endblock %}
+
+{% block content %}
+        {{ form_start(form) }}
+
+        <div class="error">{{ form_errors(form) }}</div>
+        <table>
+            <tr>
+                <td> {{ form_label(form.types, "bien.type" | trans) }}</td>
+                <td> {{ form_label(form.nomBien, "bien.nomBien" | trans ) }}</td>
+                <td> {{ form_label(form.dateConstruction, "bien.dateConstruction" | trans) }}</td>
+                <td> {{ form_label(form.prix, "bien.prix" | trans) }}</td>
+                <td> {{ form_label(form.visiteurs, "bien.visiteurs" | trans) }}</td>
+            </tr>
+            <tr>
+                <td> {{ form_errors(form.types) }} {{ form_widget(form.types) }}</td>
+                <td> {{ form_errors(form.nomBien) }} {{ form_widget(form.nomBien) }}</td>
+                <td> {{ form_errors(form.dateConstruction) }} {{ form_widget(form.dateConstruction) }}</td>
+                <td> {{ form_errors(form.prix) }} {{ form_widget(form.prix) }}</td>
+                <td> {{ form_errors(form.visiteurs) }} {{ form_widget(form.visiteurs) }}</td>
+            </tr>
+
+        </table>
+        {{ form_rest(form) }}
+
+    {{ form_end(form) }}
+{% endblock %}

@@ -1,0 +1,90 @@
+visiteur: Visitor
+visiteur.liste: Visitor's list
+visiteur.ajouter.modifier: Add or edit a visitor
+visiteur.ajouter: Add a visitor
+visiteur.liste.empty: No visitor has been found
+visiteur.liste.retour: Return to visitor's list
+visiteur.trouve: %number% visitors have been found
+visiteur.nom: Visitor's name
+visiteur.prenom: Visitor's first name
+visiteur.telephone: Visitor's phone number
+visiteur.biens: Properties
+visiteur.ajouter.succes: The visitor %prenom% %nom% has been added successfully !
+visiteur.supprimer.echec: Visitor not found
+visiteur.liste.trouver: %number% visitors have been found !
+
+typebien: Type
+typebien.nomType: Type name
+typebien.liste: Types list
+typebien.liste.retour: Return to types list
+typebien.ajouter.modifier: Add or edit a type
+typebien.ajouter: Add a type
+typebien.liste.empty: No type has been found
+typebien.ajouter.succes: The type %nomType% has been added successfully !
+typebien.supprimer.echec: Type not found
+typebien.liste.trouver: %number% types have been found !
+typebien.titre.nomtype: Property type
+typebien.biens: Property(ies) related
+typebien.biens.empty: No property of that type has been found
+
+bien: Property
+bien.liste: Properties list
+bien.liste.empty: No property has been found
+bien.liste.retour: Return to the properties list
+bien.ajouter.modifier: Add or edit a property
+bien.ajouter: Add a property
+bien.visiteurs.inscrits: Registered visitors
+bien.nomBien: Property name
+bien.dateConstruction: Property's construction date
+bien.prix: Property's price
+bien.type: Property type
+bien.typeBien: "Property type : "
+bien.visiteurs: Visitors
+bien.ajouter.succes: The property %nomBien% has been added successfully !
+bien.supprimer.echec: Property not found
+bien.liste.trouver: %number% property(ies) have been found !
+bien.achats: Subsequent owners
+
+proprietaire: Owner
+proprietaire.liste: Owner's list
+proprietaire.liste.empty: No owner has been found
+proprietaire.liste.retour: Return to the owners list
+proprietaire.ajouter.modifier: Add or edit an owner
+proprietaire.ajouter: Add an owner
+proprietaire.titre.nom: Owner's name
+proprietaire.titre.prenom: Owner's firstname
+proprietaire.titre.achats: Owner's purchase(s)
+proprietaire.ajouter.succes: The owner %nom% has been added successfully !
+proprietaire.supprimer.echec: Owner not found
+proprietaire.liste.trouver: %number% owner(s) have been found !
+
+achat: Purchase
+achat.liste: Purchases list
+achat.liste.empty: No purchase has been found
+achat.liste.retour: Return to purchases list
+achat.ajouter.modifier: Add or edit a purchase
+achat.ajouter: Add a purchase
+achat.dateAchat: Property purchase date
+achat.bien: Property bought
+achat.proprietaire: Buyer owner
+achat.ajouter.succes: The purchase %id% has been added successfully !
+achat.supprimer.echec: Purchase not found
+achat.liste.trouver: %number% purchase(s) have been found !
+
+accueil: Home
+accueil.titre: Welcome to properties management
+accueil.top.visiteur: Top alphabetical visitors
+accueil.top.bien: Top alphabetical properties
+
+titre: Properties management
+copyright: All rights reserved
+
+details: Details
+modifier: Edit
+supprimer: Delete
+description: Description
+motcle: "Keyword : "
+valider: Submit
+rechercher: Search
+feminin: Female
+masculin: Male

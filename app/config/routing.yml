@@ -1,0 +1,19 @@
+
+
+club:
+    resource: "@ClubBundle/Resources/config/routing.yml"
+    prefix:   /{_locale}/club
+    requirements:
+        _locale: en|fr
+        #Les locales disponibles sont séparées par des pipes
+
+agence:
+    resource: "@AgenceBundle/Resources/config/routing.yml"
+    prefix:   /{_locale}/agence
+    requirements:
+        _locale: en|fr
+        #Les locales disponibles sont séparées par des pipes
+
+app:
+    resource: '@AppBundle/Controller/'
+    type: annotation

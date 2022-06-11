@@ -1,0 +1,90 @@
+visiteur: Visiteur
+visiteur.liste: Liste des visiteurs
+visiteur.ajouter.modifier: Ajouter ou modifier un visiteur
+visiteur.ajouter: Ajouter un visiteur
+visiteur.liste.empty: Aucun visiteur n'a été trouvé
+visiteur.liste.retour: Retour à la liste des visiteurs
+visiteur.trouve: %number% visiteurs ont été trouvés
+visiteur.nom: Nom du visiteur
+visiteur.prenom: Prenom du visiteur
+visiteur.telephone: N° téléphone
+visiteur.biens: Biens
+visiteur.ajouter.succes: Le visiteur %prenom% %nom% a été enregistré avec succès !
+visiteur.supprimer.echec: Visiteur non trouvé
+visiteur.liste.trouver: %number% visiteur(s) ont été trouvé(s) !
+
+typebien: Type de bien
+typebien.nomType: Nom du type
+typebien.liste: Liste des types
+typebien.liste.retour: Retour à la liste des types
+typebien.ajouter.modifier: Ajouter ou modifier un type
+typebien.ajouter: Ajouter un type
+typebien.liste.empty: Aucun type n'a été trouvé
+typebien.ajouter.succes: Le type %nomType% a été enregistré avec succès !
+typebien.supprimer.echec: Type non trouvé
+typebien.liste.trouver: %number% type(s) ont été trouvé(s) !
+typebien.titre.nomtype: Type de bien
+typebien.biens: Bien(s) concerné(s)
+typebien.biens.empty: Aucun bien de ce type n'a été trouvé
+
+bien: Bien
+bien.liste: Liste des biens
+bien.liste.empty: Aucun bien n'a été trouvé
+bien.liste.retour: Retour à la liste des biens
+bien.ajouter.modifier: Ajouter ou modifier un bien
+bien.ajouter: Ajouter un bien
+bien.visiteurs.inscrits: Visiteurs inscrits
+bien.nomBien: Titre d'un bien
+bien.dateConstruction: Date de construction d'un bien
+bien.prix: Prix du bien
+bien.type: Type de bien
+bien.typeBien: "Type : "
+bien.visiteurs: Visiteurs
+bien.ajouter.succes: Le bien %nomBien% a été enregistré avec succès !
+bien.supprimer.echec: Bien non trouvé
+bien.liste.trouver: %number% bien(s) ont été trouvé(s) !
+bien.achats: Propriétaires successifs
+
+proprietaire: Propriétaire
+proprietaire.liste: Liste des propriétaires
+proprietaire.liste.empty: Aucun propriétaire n'a été trouvé
+proprietaire.liste.retour: Retour à la liste des propriétaires
+proprietaire.ajouter.modifier: Ajouter ou modifier un propriétaire
+proprietaire.ajouter: Ajouter un propriétaire
+proprietaire.titre.nom: Nom d'un proprietaire
+proprietaire.titre.prenom: Prénom d'un proprietaire
+proprietaire.titre.achats: Achat(s) du propriétaire
+proprietaire.ajouter.succes: Le propriétaire %nom% a été enregistré avec succès !
+proprietaire.supprimer.echec: Propriétaire non trouvé
+proprietaire.liste.trouver: %number% propriétaire(s) ont été trouvé(s) !
+
+achat: Achat
+achat.liste: Liste des achats
+achat.liste.empty: Aucun achat n'a été trouvé
+achat.liste.retour: Retour à la liste des achats
+achat.ajouter.modifier: Ajouter ou modifier un achat
+achat.ajouter: Ajouter un achat
+achat.dateAchat: Date d'achat d'un bien
+achat.bien: Bien acheté
+achat.proprietaire: Propriétaire acquéreur
+achat.ajouter.succes: L'achat %id% a été enregistré avec succès !
+achat.supprimer.echec: Achat non trouvé
+achat.liste.trouver: %number% achat(s) ont été trouvé(s) !
+
+accueil: Accueil
+accueil.titre: Bienvenue sur la gestion des biens !
+accueil.top.visiteur: Top alphabétique des visiteurs
+accueil.top.bien: Top alphabétique des biens
+
+titre: Gestion des biens
+copyright: Tous droits réservés 
+
+details: Détails
+modifier: Modifier
+supprimer: Supprimer
+description: Description
+motcle: "Mot-clé : "
+valider: Valider
+rechercher: Rechercher
+feminin: Feminin
+masculin: Masculin

@@ -1,0 +1,31 @@
+{{ number_of_bien }}
+<table>
+    {% for bien in biens %}
+    <tr>
+        <td> {{ bien.nomBien }} </td>
+        <td> {{ bien.dateConstruction|date('d/m/Y')}} </td>
+        <td> {{ bien.prix }} €</td>
+        <td> {{ bien.types.nomType }} </td>
+
+        <td>
+            {% for visiteur in bien.visiteurs %}
+                {{ visiteur.nom }}-{{ visiteur.prenom }}  
+                <br/>
+            {% else %} 
+                {{ "visiteur.liste.empty" | trans }}
+            {% endfor %}
+        </td>
+
+        <td><a href="{{ path('agence_bien_details' , { 'id': bien.id}) }}">{{ "details" | trans }} | 
+        <a href="{{ path('agence_bien_modifier' , { 'id': bien.id}) }}">{{ "modifier" | trans }} | 
+        <a href="{{ path('agence_bien_supprimer' , { 'id': bien.id}) }}">{{ "supprimer" | trans }}</td>
+
+    </tr>
+
+    {% else %} 
+        <tr>
+            <td>{{ "bien.liste.empty" | trans }}</td>
+        </tr>
+    {% endfor %}
+
+</table>

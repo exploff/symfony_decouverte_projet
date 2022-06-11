@@ -1,0 +1,30 @@
+{{ number_of_activite }}
+<table>
+    {% for activite in activites %}
+    <tr>
+        <td> {{ activite.titre }} </td>
+        <td> {{ activite.description }} </td>
+        <td> {{ activite.club.nom }} </td>
+
+        <td>
+            {% for adherent in activite.adherents %}
+                {{ adherent.nom }}-{{ adherent.prenom }} 
+                <br/> 
+            {% else %} 
+                {{ "adherents.liste.empty" | trans }}
+            {% endfor %}
+        </td>
+
+        <td><a href="{{ path('club_activite_details' , { 'id': activite.id}) }}">{{ "details" | trans }} | 
+        <a href="{{ path('club_activite_modifier' , { 'id': activite.id}) }}">{{ "modifier" | trans }} | 
+        <a href="{{ path('club_activite_supprimer' , { 'id': activite.id}) }}">{{ "supprimer" | trans }}</td>
+
+    </tr>
+
+    {% else %} 
+        <tr>
+            <td>{{ "activite.liste.empty" | trans }}</td>
+        </tr>
+    {% endfor %}
+
+</table>

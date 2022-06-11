@@ -1,0 +1,115 @@
+# ------ Général ------ #
+agence_homepage:
+    path:     /
+    defaults: { _controller: AgenceBundle:Default:index }
+agence_visiteur_accueil:
+    path: /visiteur/
+    defaults: { _controller: AgenceBundle:Visiteur:lister }
+agence_bien_accueil:
+    path: /bien/
+    defaults: { _controller: AgenceBundle:Bien:lister }
+agence_typebien_accueil:
+    path: /typebien/
+    defaults: { _controller: AgenceBundle:TypeBien:lister }
+agence_proprietaire_accueil:
+    path: /proprietaire/
+    defaults: { _controller: AgenceBundle:Proprietaire:lister }
+agence_achat_accueil:
+    path: /achat/
+    defaults: { _controller: AgenceBundle:Achat:lister }
+
+# ------ Bien ------ #
+agence_bien_lister:
+    path: /bien/
+    defaults: { _controller: AgenceBundle:Bien:lister }
+agence_bien_ajouter:
+    path: /bien/ajouter
+    defaults: { _controller: AgenceBundle:Bien:editer }
+agence_bien_modifier:
+    path: /bien/modifier/{id}
+    defaults: { _controller: AgenceBundle:Bien:editer }
+agence_bien_supprimer:
+    path: /bien/supprimer/{id}
+    defaults: { _controller: AgenceBundle:Bien:supprimer }
+agence_bien_details:
+    path: /bien/details/{id}
+    defaults: { _controller: AgenceBundle:Bien:details }
+agence_bien_rechercher:
+    path: /bien/rechercher
+    defaults: { _controller: AgenceBundle:Bien:rechercher }
+    requirements:
+        _method: POST
+
+# ------ Visiteur ------ #
+agence_visiteur_lister:
+    path: /visiteur/
+    defaults: { _controller: AgenceBundle:Visiteur:lister }
+agence_visiteur_ajouter:
+    path: /visiteur/ajouter
+    defaults: { _controller: AgenceBundle:Visiteur:editer }
+agence_visiteur_modifier:
+    path: /visiteur/modifier/{id}
+    defaults: { _controller: AgenceBundle:Visiteur:editer }
+agence_visiteur_supprimer:
+    path: /visiteur/supprimer/{id}
+    defaults: { _controller: AgenceBundle:Visiteur:supprimer }
+agence_visiteur_details:
+    path: /visiteur/details/{id}
+    defaults: { _controller: AgenceBundle:Visiteur:details }
+
+
+# ------ TypeBien ------ #
+agence_typebien_lister:
+    path: /typebien/
+    defaults: { _controller: AgenceBundle:TypeBien:lister }
+agence_typebien_ajouter:
+    path: /typebien/ajouter
+    defaults: { _controller: AgenceBundle:TypeBien:editer }
+agence_typebien_modifier:
+    path: /typebien/modifier/{id}
+    defaults: { _controller: AgenceBundle:TypeBien:editer }
+agence_typebien_supprimer:
+    path: /typebien/supprimer/{id}
+    defaults: { _controller: AgenceBundle:TypeBien:supprimer }
+agence_typebien_details:
+    path: /typebien/details/{id}
+    defaults: { _controller: AgenceBundle:TypeBien:details }
+
+
+# ------ Proprietaire ------ #
+agence_proprietaire_lister:
+    path: /proprietaire/
+    defaults: { _controller: AgenceBundle:Proprietaire:lister }
+agence_proprietaire_ajouter:
+    path: /proprietaire/ajouter
+    defaults: { _controller: AgenceBundle:Proprietaire:editer }
+agence_proprietaire_modifier:
+    path: /proprietaire/modifier/{id}
+    defaults: { _controller: AgenceBundle:Proprietaire:editer }
+agence_proprietaire_supprimer:
+    path: /proprietaire/supprimer/{id}
+    defaults: { _controller: AgenceBundle:Proprietaire:supprimer }
+agence_proprietaire_details:
+    path: /proprietaire/details/{id}
+    defaults: { _controller: AgenceBundle:Proprietaire:details }
+
+
+# ------ Achat ------ #
+agence_achat_lister:
+    path: /achat/
+    defaults: { _controller: AgenceBundle:Achat:lister }
+agence_achat_ajouter:
+    path: /achat/ajouter
+    defaults: { _controller: AgenceBundle:Achat:editer }
+agence_achat_modifier:
+    path: /achat/modifier/{id}
+    defaults: { _controller: AgenceBundle:Achat:editer }
+agence_achat_supprimer:
+    path: /achat/supprimer/{id}
+    defaults: { _controller: AgenceBundle:Achat:supprimer }
+agence_achat_details:
+    path: /achat/details/{id}
+    defaults: { _controller: AgenceBundle:Achat:details }
+
+
+

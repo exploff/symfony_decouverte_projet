@@ -1,0 +1,15 @@
+{% extends '@Agence/layout.html.twig' %}
+{% block title %}{{ "achat.liste" | trans }}{% endblock %}
+{% block content %}
+
+    {% for message in app.flashes('notice') %}
+        <div class="flash-notice">{{ message }}</div>
+    {% endfor %}
+    <br/>
+    {{ include('@Agence/Achat/liste.html.twig', {'achats' : achats}) }}
+
+
+    <p>
+        <a href="{{ path('agence_achat_ajouter') }}">{{ "achat.ajouter" | trans }}</a>
+    </p>
+{% endblock %}

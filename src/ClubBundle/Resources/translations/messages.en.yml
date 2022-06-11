@@ -1,0 +1,56 @@
+adherent: Member
+adherent.liste: Members list
+adherent.ajouter.modifier: Add or Update a member
+adherent.ajouter: Add a member
+adherent.liste.empty: No member found
+adherent.trouve: %number% members have been found
+adherent.label.nom: Member's name
+adherent.label.prenom: Member's firstname
+adherent.label.date: Member's birth date
+adherent.label.sexe: Member's gender
+adherent.ajouter.succes: Member %prenom% %nom% has been saved successfully
+adherent.ajouter.echec: Adhérent not found
+adherent.liste.trouver: %number% members have been found
+
+club: Club
+club.nom: Club's name
+club.liste: Clubs list
+club.ajouter.modifier: Add or Update a club
+club.ajouter: Add a club
+club.ajouter.succes: Club %nom% has been saved successfully
+club.ajouter.echec: Club not found
+club.liste.empty: No clubs have been found
+club.liste.trouver: %number% clubs have been found
+
+activite: Activity
+activite.liste: Activities list
+activite.liste.empty: No activities have been found
+activite.liste.retour: Return to activities list
+activite.ajouter.modifier: Add or Update an activity
+activite.ajouter: Add an activity
+activite.adherents.inscrits: Registered members
+activite.titre: Activity's title
+activite.description: Activity's description
+activite.club: Activity's club
+activite.adherents: Members 
+activite.ajouter.succes: The activity %titre% has been saved successfully
+activite.ajouter.echec: Activty not found
+activite.liste.trouver: %number% activities have been found
+
+accueil: Home
+accueil.titre: Welcome to club management
+accueil.top.activite: Top alphabetical activities
+accueil.top.adherent: Top youngest members
+
+titre: Club management
+copyright: All rights reserved
+
+details: Details
+description: Description
+modifier: Modify
+supprimer: Delete
+motcle: "Keyword : "
+valider: Submit
+rechercher: Search
+feminin: Female
+masculin: Male

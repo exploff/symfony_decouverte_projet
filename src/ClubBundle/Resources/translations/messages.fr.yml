@@ -1,0 +1,56 @@
+adherent: Adherent
+adherent.liste: Liste des adherents
+adherent.ajouter.modifier: Ajouter ou Modifier un adherent
+adherent.ajouter: Ajouter un adherent
+adherent.liste.empty: Aucun adhérent n'a été trouvé
+adherent.trouve: %number% adherents ont été trouvés
+adherent.label.nom: Nom de l'adherent
+adherent.label.prenom: Prenom de l'adherent
+adherent.label.date: Date de naissance de l'adherent
+adherent.label.sexe: Sexe de l'adherent
+adherent.ajouter.succes: L'adherent %prenom% %nom% a été enregistré avec succès !
+adherent.supprimer.echec: Adhérent non trouvé
+adherent.liste.trouver: %number% adhérents ont été trouvé !
+
+club: Club
+club.nom: Nom du club
+club.liste: Liste des clubs
+club.ajouter.modifier: Ajouter ou Modifier un club
+club.ajouter: Ajouter un club
+club.liste.empty: Aucun club n'a été trouvé
+club.ajouter.succes: Le club %nom% a été enregistré avec succès !
+club.supprimer.echec: Club non trouvé
+club.liste.trouver: %number% clubs ont été trouvé !
+
+activite: Activite
+activite.liste: Liste des activites
+activite.liste.empty: Aucune activite n'a été trouvé
+activite.liste.retour: Retour à la liste des activites
+activite.ajouter.modifier: Ajouter ou Modifier une activite
+activite.ajouter: Ajouter une activite
+activite.adherents.inscrits: Adhérents inscrits
+activite.titre: Titre d'une activite
+activite.description: Description d'une activite	
+activite.club: Club 
+activite.adherents: Adherents
+activite.ajouter.succes: L'activite %titre% a été enregistrée avec succès !
+activite.supprimer.echec: Activite non trouvé
+activite.liste.trouver: %number% activités ont été trouvé !
+
+accueil: Accueil
+accueil.titre: Bienvenue sur la Gestion des Clubs !
+accueil.top.adherent: Top des adhérents les plus jeunes
+accueil.top.activite: Top alphabétique des activités
+
+titre: Gestion des Clubs
+copyright: Tous droits réservés 
+
+details: Details
+modifier: Modifier
+supprimer: Supprimer
+description: Description
+motcle: "Mot-clé : "
+valider: Valider
+rechercher: Rechercher
+feminin: Feminin
+masculin: Masculin

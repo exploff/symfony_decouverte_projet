@@ -1,0 +1,11 @@
+{% extends '@Club/layout.html.twig' %}
+{% block title %} {{ "accueil.titre" | trans }} {% endblock %}
+
+{% block content %}
+
+<h3>{{ "accueil.top.adherent" | trans }}</h3>
+{{ render(controller('ClubBundle:Adherent:top', {'max': 3 })) }}
+<h3>{{ "accueil.top.activite" | trans }}</h3>
+{{ render(controller('ClubBundle:Activite:top', {'max': 3 })) }}
+
+{% endblock %}

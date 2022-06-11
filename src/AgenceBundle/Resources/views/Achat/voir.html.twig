@@ -1,0 +1,13 @@
+{% extends '@Agence/layout.html.twig' %}
+{% block title %} {{ "achat" | trans }} {% endblock %}
+{% block content %}
+
+<p>{{ "achat.bien" | trans }} : {{ achat.biens.nomBien }} - {{ achat.biens.dateConstruction|date('d/m/Y') }} - {{ achat.biens.prix }} €</p>
+
+<p>{{ "achat.dateAchat" | trans }} : {{ achat.dateAchat|date('d/m/Y') }}</p>
+
+<p>{{ "achat.proprietaire" | trans }} : {{ achat.proprietaires.nom }} - {{ achat.proprietaires.prenom }}</p>
+
+</br>
+<a href="{{ path('agence_achat_lister') }}">{{ "achat.liste.retour" | trans }}</a>
+{% endblock %}

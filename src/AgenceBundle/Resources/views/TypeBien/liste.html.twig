@@ -1,0 +1,19 @@
+{{ number_of_typebien }}
+<table>
+    {% for typebien in typebiens %}
+    <tr>
+        <td> {{ typebien.nomType }} </td>
+
+        <td><a href="{{ path('agence_typebien_details' , { 'id': typebien.id}) }}">{{ "details" | trans }} | 
+        <a href="{{ path('agence_typebien_modifier' , { 'id': typebien.id}) }}">{{ "modifier" | trans }} | 
+        <a href="{{ path('agence_typebien_supprimer' , { 'id': typebien.id}) }}">{{ "supprimer" | trans }}</td>
+
+    </tr>
+
+    {% else %} 
+        <tr>
+            <td>{{ "typebien.liste.empty" | trans }}</td>
+        </tr>
+    {% endfor %}
+
+</table>

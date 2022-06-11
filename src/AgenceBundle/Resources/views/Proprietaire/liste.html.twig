@@ -1,0 +1,28 @@
+{{ number_of_proprietaire }}
+<table>
+    {% for proprio in proprietaires %}
+    <tr>
+        <td> {{ proprio.nom }} </td>
+        <td> {{ proprio.prenom }} </td>
+        <td>
+            {% for achat in proprio.achat %}
+                {{ achat.dateAchat | date('d/m/Y')}} - {{ achat.biens.nomBien }} - {{ achat.biens.prix }} € 
+                <br/>
+            {% else %} 
+                {{ "achat.liste.empty" | trans }}
+            {% endfor %}
+        </td>
+
+        <td><a href="{{ path('agence_proprietaire_details' , { 'id': proprio.id}) }}">{{ "details" | trans }} | 
+        <a href="{{ path('agence_proprietaire_modifier' , { 'id': proprio.id}) }}">{{ "modifier" | trans }} | 
+        <a href="{{ path('agence_proprietaire_supprimer' , { 'id': proprio.id}) }}">{{ "supprimer" | trans }}</td>
+
+    </tr>
+
+    {% else %} 
+        <tr>
+            <td>{{ "proprietaire.liste.empty" | trans }}</td>
+        </tr>
+    {% endfor %}
+
+</table>

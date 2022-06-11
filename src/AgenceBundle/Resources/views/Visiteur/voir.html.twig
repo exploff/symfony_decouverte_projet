@@ -1,0 +1,18 @@
+{% extends '@Agence/layout.html.twig' %}
+{% block title %} {{ visiteur.nom }} {% endblock %}
+{% block content %}
+
+<p>{{ "visiteur.nom" | trans }} : {{ visiteur.prenomnom }} </p>
+<p>{{ "visiteur.telephone" | trans }} : {{ visiteur.telephone }} </p>
+
+<p>{{ "visiteur.biens" | trans }} :</p>
+<ul>
+    {% for bien in visiteur.biens %}
+        <li>{{ bien.nomBien }} - {{ bien.dateConstruction | date('d/m/Y') }} - {{ bien.prix }}</li>
+    {% else %} 
+        <li>{{ "bien.liste.empty" | trans }}</li>
+    {% endfor %}
+</ul>
+</br>
+<a href="{{ path('agence_visiteur_lister') }}">{{ "visiteur.liste.retour" | trans }}</a>
+{% endblock %}

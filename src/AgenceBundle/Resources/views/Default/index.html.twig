@@ -1,0 +1,11 @@
+{% extends '@Agence/layout.html.twig' %}
+{% block title %} {{ "accueil.titre" | trans }} {% endblock %}
+
+{% block content %}
+
+<h3>{{ "accueil.top.bien" | trans }}</h3>
+{{ render(controller('AgenceBundle:Bien:top', {'max': 3 })) }}
+<h3>{{ "accueil.top.visiteur" | trans }}</h3>
+{{ render(controller('AgenceBundle:Visiteur:top', {'max': 3 })) }}
+
+{% endblock %}

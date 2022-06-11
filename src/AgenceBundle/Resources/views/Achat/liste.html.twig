@@ -1,0 +1,23 @@
+{{ number_of_achat }}
+<table>
+    {% for achat in achats %}
+        <tr>
+            <td> {{ achat.dateAchat|date('d/m/Y')}} </td>
+            <td>
+                {{ achat.biens.nomBien }}
+            </td>
+            <td>
+                {{ achat.proprietaires.nom }} {{ achat.proprietaires.prenom }}   
+            </td>
+            <td>
+                <a href="{{ path('agence_achat_details' , { 'id': achat.id}) }}">{{ "details" | trans }} | 
+                <a href="{{ path('agence_achat_modifier' , { 'id': achat.id}) }}">{{ "modifier" | trans }} | 
+                <a href="{{ path('agence_achat_supprimer' , { 'id': achat.id}) }}">{{ "supprimer" | trans }}
+            </td>
+        </tr>
+    {% else %} 
+        <tr>
+            <td>{{ "achat.liste.empty" | trans }}</td>
+        </tr>
+    {% endfor %}
+</table>

@@ -1,0 +1,15 @@
+{% extends '@Agence/layout.html.twig' %}
+{% block title %}{{ "proprietaire.liste" | trans }}{% endblock %}
+{% block content %}
+
+    {% for message in app.flashes('notice') %}
+        <div class="flash-notice">{{ message }}</div>
+    {% endfor %}
+    <br/>
+    {{ include('@Agence/Proprietaire/liste.html.twig', {'proprietaires' : proprietaires}) }}
+
+
+    <p>
+        <a href="{{ path('agence_proprietaire_ajouter') }}">{{ "proprietaire.ajouter" | trans }}</a>
+    </p>
+{% endblock %}

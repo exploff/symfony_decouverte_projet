@@ -1,0 +1,15 @@
+{% extends '@Agence/layout.html.twig' %}
+{% block title %}{{ "typebien.liste" | trans }}{% endblock %}
+{% block content %}
+
+    {% for message in app.flashes('notice') %}
+        <div class="flash-notice">{{ message }}</div>
+    {% endfor %}
+    <br/>
+    {{ include('@Agence/TypeBien/liste.html.twig', {'typebiens' : typebiens}) }}
+
+
+    <p>
+        <a href="{{ path('agence_typebien_ajouter') }}">{{ "typebien.ajouter" | trans }}</a>
+    </p>
+{% endblock %}
